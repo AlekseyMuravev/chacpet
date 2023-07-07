@@ -16,11 +16,26 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/preset-env', { targets: "defaults" }]
-            ]
+              [
+                '@babel/preset-env', { 
+                targets: "defaults" 
+              }
+            ]]
           }
         }
-      }
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          'style-loader',
+          { 
+          loader: "css-loader", options: { 
+            modules: {
+              auto: (resPath) => Boolean(resPath.includes('.module.')),
+              localIdentName: '[path][name]__[local]--[hash:base64:5]'
+          },
+        } }],
+      },
     ]
   },
   mode: 'development',
