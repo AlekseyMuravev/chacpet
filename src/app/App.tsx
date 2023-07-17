@@ -1,12 +1,21 @@
-import React from 'react';
-import { MainPage } from './page';
+import { RouterProvider } from 'react-router5'
+import { Router } from 'router5'
+import { memo } from 'react';
+import { RouteNode } from '@wildberries/service-router';
 
-function App() {
+type PropsType = {
+  router: Router;
+};
+
+const App = memo(({ router }: PropsType) => {
+
   return (
-    <div>
-      <MainPage />
-    </div>
+    // <StoreProvider>
+    <RouterProvider key={1} router={router}>
+      <RouteNode nodeName="">{({ content }) => content}</RouteNode>
+    </RouterProvider>
+    // </StoreProvider>
   );
-}
+})
 
 export default App;

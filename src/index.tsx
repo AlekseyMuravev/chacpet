@@ -1,6 +1,9 @@
-import { BrowserRouter } from 'react-router-dom';
+
+import { configureRouter } from '@wildberries/service-router';
 import { createRoot } from 'react-dom/client';
 import App from './app/App';
+import { HOME_PAGE_ROUTE } from './page/constants/routes';
+import { routes } from './page/routes';
 
 const container = document.getElementById('root');
 
@@ -10,10 +13,20 @@ if (!container) {
   );
 }
 
-const root = createRoot(container);
+const router = configureRouter({
+  defaultRoute: HOME_PAGE_ROUTE.nodeName,
+});
 
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-);
+router.setDependencies({
+  routes,
+});
+
+router.add(routes);
+
+router.start(() => {
+  const root = createRoot(container);
+
+  root.render(
+    <App router={router} />
+  );
+});

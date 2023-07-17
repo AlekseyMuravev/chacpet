@@ -1,9 +1,9 @@
 import styles from './index.module.scss';
 
-export const MainPage = () => {
+export const Page = () => {
   return (
     <div className={styles.wrapper}>
-      123
+      <h1>Photos</h1>
     </div>
   );
 };
