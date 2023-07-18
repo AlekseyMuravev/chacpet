@@ -5,7 +5,7 @@ type RouteType = {
 }
 
 enum RouteNamesEnum {
-  HOME = 'home',
+  HOME = 'main',
   NEWS = 'news',
   MESSAGES = 'messages',
   PHOTOS = 'photos',
@@ -13,23 +13,23 @@ enum RouteNamesEnum {
 
 export const PAGE_ROUTES: Record<RouteNamesEnum, RouteType> = {
   [RouteNamesEnum.HOME]: {
-    name: 'home',
-    path: '/home',
-    nodeName: 'home'
+    name: 'main',
+    path: '/main',
+    nodeName: 'main'
   },
   [RouteNamesEnum.NEWS]: {
     name: 'news',
     path: '/news',
-    nodeName: 'home.news'
+    nodeName: 'news'
   },
   [RouteNamesEnum.MESSAGES]: {
     name: 'messages',
     path: '/messages',
-    nodeName: 'home.messages'
+    nodeName: 'messages'
   },
   [RouteNamesEnum.PHOTOS]: {
     name: 'photos',
     path: '/photos',
-    nodeName: 'home.photos'
+    nodeName: 'photos'
   }
 }

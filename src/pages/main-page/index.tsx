@@ -1,17 +1,13 @@
 import { RouteNode } from "@wildberries/service-router";
 import { PAGE_ROUTES } from "../constants/routes";
-import Layout from "../layout";
-
-
+import { Page } from "./ui";
 
 const action = async () => {
   return {
     content: (
-      <Layout>
-        <RouteNode nodeName={PAGE_ROUTES.home.nodeName}>
-          {({ content }) => content}
-        </RouteNode>
-      </Layout>
+      <RouteNode nodeName={PAGE_ROUTES.main.nodeName}>
+        {() => <Page />}
+      </RouteNode>
     ),
   };
 };
