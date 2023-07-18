@@ -1,4 +1,4 @@
-import { PAGE_ROUTES } from '@/page/constants/routes';
+import { PAGE_ROUTES } from '../constants/routes';
 
 export default {
   name: PAGE_ROUTES.news.name,

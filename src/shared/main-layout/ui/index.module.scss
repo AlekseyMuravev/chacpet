@@ -18,6 +18,14 @@
   padding: 16px;
 }
 
+.text {
+  display: flex;
+  width: 1076px;
+  margin: 0 auto;
+  flex: 1 1;
+  padding: 4px;
+}
+
 .tabs {
   flex-shrink: 0;
 }
