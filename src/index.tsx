@@ -2,7 +2,7 @@
 import { configureRouter } from '@wildberries/service-router';
 import { createRoot } from 'react-dom/client';
 import App from './app/App';
-import { HOME_PAGE_ROUTE } from './page/constants/routes';
+import { PAGE_ROUTES } from './page/constants/routes';
 import { routes } from './page/routes';
 
 const container = document.getElementById('root');
@@ -14,7 +14,7 @@ if (!container) {
 }
 
 const router = configureRouter({
-  defaultRoute: HOME_PAGE_ROUTE.nodeName,
+  defaultRoute: PAGE_ROUTES.home.nodeName,
 });
 
 router.setDependencies({

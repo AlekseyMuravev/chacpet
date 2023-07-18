@@ -12,7 +12,7 @@ export function buildCssLoader(isDev: boolean) {
           modules: {
             auto: (resPath: string) => Boolean(resPath.includes('.module.')),
             localIdentName: isDev
-              ? '[path]--[hash:base64:5]'
+              ? '[path][name]__[local]'
               : '[hash:base64:8]',
           },
         },
