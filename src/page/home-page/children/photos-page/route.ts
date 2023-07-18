@@ -1,7 +1,7 @@
-import { PHOTOS_PAGE_ROUTE } from "@/page/constants/routes";
+import { PAGE_ROUTES } from "@/page/constants/routes";
 
 export default {
-  name: PHOTOS_PAGE_ROUTE.name,
-  path: PHOTOS_PAGE_ROUTE.path,
+  name: PAGE_ROUTES.photos.name,
+  path: PAGE_ROUTES.photos.path,
   loadAction: () => import('./index'),
 }

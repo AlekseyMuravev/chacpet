@@ -1,23 +1,35 @@
-export const HOME_PAGE_ROUTE = {
-  name: 'home',
-  path: '/home',
-  nodeName: 'home'
+type RouteType = {
+  name: string;
+  path: string;
+  nodeName: string;
 }
 
-export const NEWS_PAGE_ROUTE = {
-  name: 'news',
-  path: '/news',
-  nodeName: 'home.news'
+enum RouteNamesEnum {
+  HOME = 'home',
+  NEWS = 'news',
+  MESSAGES = 'messages',
+  PHOTOS = 'photos',
 }
 
-export const MESSAGES_PAGE_ROUTE = {
-  name: 'messages',
-  path: '/messages',
-  nodeName: 'home.messages'
-}
-
-export const PHOTOS_PAGE_ROUTE = {
-  name: 'photos',
-  path: '/photos',
-  nodeName: 'home.photos'
+export const PAGE_ROUTES: Record<RouteNamesEnum, RouteType> = {
+  [RouteNamesEnum.HOME]: {
+    name: 'home',
+    path: '/home',
+    nodeName: 'home'
+  },
+  [RouteNamesEnum.NEWS]: {
+    name: 'news',
+    path: '/news',
+    nodeName: 'home.news'
+  },
+  [RouteNamesEnum.MESSAGES]: {
+    name: 'messages',
+    path: '/messages',
+    nodeName: 'home.messages'
+  },
+  [RouteNamesEnum.PHOTOS]: {
+    name: 'photos',
+    path: '/photos',
+    nodeName: 'home.photos'
+  }
 }

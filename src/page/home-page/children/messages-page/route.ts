@@ -1,7 +1,7 @@
-import { MESSAGES_PAGE_ROUTE } from "@/page/constants/routes";
+import { PAGE_ROUTES } from "@/page/constants/routes";
 
 export default {
-  name: MESSAGES_PAGE_ROUTE.name,
-  path: MESSAGES_PAGE_ROUTE.path,
+  name: PAGE_ROUTES.messages.name,
+  path: PAGE_ROUTES.messages.path,
   loadAction: () => import('./index'),
 }
